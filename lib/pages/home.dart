@@ -6,30 +6,30 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('First Route'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Center(
-            child: Text('TITLE'),
-          ),
-          Container(
-            child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed risus erat. Curabitur convallis euismod turpis, sed mollis lorem gravida blandit. Fusce sed tempus nisl. Praesent ac urna quam. Vivamus nec tempus tortor.',
-            textAlign: TextAlign.center),
-            padding: EdgeInsets.fromLTRB(40.0, 20.0, 40.0, 40.0),
-          ),
-          Center(
-            child: ElevatedButton(
-              child: Text('Open route Second'),
-              onPressed: () {
-                Navigator.of(context).push(Routes().generateRoute(Second(), 800));
-              },
+      body: Container(
+        decoration: new BoxDecoration(color: Colors.red),
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Center(
+              child: Text('TITLE'),
             ),
-          )
-        ],
+            Container(
+              child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed risus erat. Curabitur convallis euismod turpis, sed mollis lorem gravida blandit. Fusce sed tempus nisl. Praesent ac urna quam. Vivamus nec tempus tortor.',
+              textAlign: TextAlign.center),
+              padding: EdgeInsets.fromLTRB(40.0, 20.0, 40.0, 40.0),
+            ),
+            Center(
+              child: ElevatedButton(
+                child: Text('Open route Second'),
+                onPressed: () {
+                  Navigator.of(context).push(Routes().generateRoute(Second(), 800));
+                },
+              ),
+            )
+          ],
+        )
       )
     );
   }
