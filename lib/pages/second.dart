@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../routes.dart';
+import 'home.dart';
 
 class Second extends StatelessWidget {
   @override
@@ -10,7 +12,7 @@ class Second extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.of(context).push(Routes().generateRoute(Home(), 800));;
           },
           child: Text('Go back!'),
         ),
