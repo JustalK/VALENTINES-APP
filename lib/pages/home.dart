@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'second.dart';
+import '../routes.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -12,10 +12,7 @@ class Home extends StatelessWidget {
         child: ElevatedButton(
           child: Text('Open route Second'),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Second()),
-            );
+            Navigator.of(context).push(Routes().generateRoute());
           },
         ),
       ),
