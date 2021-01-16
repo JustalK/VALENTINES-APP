@@ -35,6 +35,9 @@ class Second extends StatelessWidget {
                         )
                       )
                     ),
+                    Center(
+                      child: Text('Slide to the right ->'),
+                    )
                   ]
                 )
               ),
