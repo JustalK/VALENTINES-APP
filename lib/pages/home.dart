@@ -23,10 +23,13 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Center(
-              child: CircleAvatar(
-                radius: 72.0,
-                backgroundColor: Colors.transparent,
-                backgroundImage: AssetImage('assets/images/me.jpeg'),
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 40.0),
+                child: CircleAvatar(
+                  radius: 72.0,
+                  backgroundColor: Colors.transparent,
+                  backgroundImage: AssetImage('assets/images/me.jpeg'),
+                )
               )
             ),
             Center(
