@@ -5,6 +5,29 @@ import '../components/ImageText.dart';
 import '../components/CardImageText.dart';
 
 class Second extends StatelessWidget {
+  List<CardObject> cards = [
+    CardObject('2 January 2020'),
+    CardObject('2 January 2020'),
+    CardObject('2 January 2020'),
+    CardObject('2 January 2020'),
+    CardObject('2 January 2020'),
+    CardObject('2 January 2020')
+  ];
+
+  List<Widget>getAllCards() {
+    List<Widget> childs = [];
+    for(var i = 0; i < cards.length; i++){
+      childs.add(Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Container(
+          height: 150,
+          child: CardImageText()
+          )
+      ));
+    }
+    return childs;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,64 +57,7 @@ class Second extends StatelessWidget {
                 color: Colors.orange,
                 child: ListView(
                   scrollDirection: Axis.vertical,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Container(
-                        height: 150,
-                        child: CardImageText()
-                        )
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Container(
-                        height: 150,
-                        child: CardImageText()
-                        )
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Container(
-                        height: 150,
-                        child: CardImageText()
-                        )
-                    ),
-                                        Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Container(
-                        height: 150,
-                        child: CardImageText()
-                        )
-                    ),
-                                        Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Container(
-                        height: 150,
-                        child: CardImageText()
-                        )
-                    ),
-                                        Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Container(
-                        height: 150,
-                        child: CardImageText()
-                        )
-                    ),
-                                        Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Container(
-                        height: 200,
-                        child: CardImageText()
-                        )
-                    ),
-                                        Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Container(
-                        height: 150,
-                        child: CardImageText()
-                        )
-                    ),
-                  ]
+                  children: getAllCards()
                 )
               ),
             ],

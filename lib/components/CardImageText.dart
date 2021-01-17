@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+class CardObject {
+  String date;
+  String text;
+
+  CardObject(date);
+}
+
 class CardImageText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
