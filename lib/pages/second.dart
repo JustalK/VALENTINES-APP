@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../routes.dart';
 import 'home.dart';
 import '../components/ImageText.dart';
+import '../components/Background.dart';
 import '../components/CardImageText.dart';
 
 class Second extends StatelessWidget {
@@ -56,13 +57,15 @@ class Second extends StatelessWidget {
                 color: Colors.yellow,
               ),
               Container(
-                width: (MediaQuery.of(context).size.width),
                 height: (MediaQuery.of(context).size.height),
-                color: Colors.orange,
-                child: ListView(
-                  scrollDirection: Axis.vertical,
-                  children: getAllCards()
-                )
+                width: (MediaQuery.of(context).size.width),
+                child: Background(
+                  width: (MediaQuery.of(context).size.width),
+                  child: ListView(
+                    scrollDirection: Axis.vertical,
+                    children: getAllCards()
+                  )
+                ),
               ),
             ],
           ),
