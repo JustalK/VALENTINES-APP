@@ -1,23 +1,13 @@
 import 'package:flutter/material.dart';
 import '../routes.dart';
 import 'second.dart';
+import '../components/Background.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.pink,
-                Colors.yellow,
-                Colors.red
-              ]
-            ),
-        ),
+      body: Background(
         child:Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

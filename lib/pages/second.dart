@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import '../routes.dart';
 import 'home.dart';
 import '../components/ImageText.dart';
+import '../components/Background.dart';
 
 class Second extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: Background(
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
@@ -21,14 +22,14 @@ class Second extends StatelessWidget {
               ),
               Container(
                 width: (MediaQuery.of(context).size.width),
-                color: Colors.green,
+                color: Colors.transparent,
               ),
               Container(
                 width: (MediaQuery.of(context).size.width),
                 color: Colors.yellow,
               ),
               Container(
-                width: 160.0,
+                width: (MediaQuery.of(context).size.width),
                 color: Colors.orange,
               ),
             ],
