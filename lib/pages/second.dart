@@ -5,26 +5,30 @@ import '../components/ImageText.dart';
 import '../components/CardImageText.dart';
 
 class Second extends StatelessWidget {
-  List<CardObject> cards = [
-    CardObject('2 January 2020'),
-    CardObject('2 January 2020'),
-    CardObject('2 January 2020'),
-    CardObject('2 January 2020'),
-    CardObject('2 January 2020'),
-    CardObject('2 January 2020')
-  ];
-
   List<Widget>getAllCards() {
     List<Widget> childs = [];
-    for(var i = 0; i < cards.length; i++){
+
+    List<CardObject> cards = [
+      CardObject('2 January 2020', '1 asdasdasd asd as d sad a dsa d assd as d ad asd'),
+      CardObject('4 January 2020', '2 asdasdasd asd as d sad a dsa d assd as d ad asd'),
+      CardObject('6 January 2020', '3 asdasdasd asd as d sad a dsa d assd as d ad asd'),
+      CardObject('8 January 2020', '4 asdasdasd asd as d sad a dsa d assd as d ad asd'),
+      CardObject('2 January 2020', '1 asdasdasd asd as d sad a dsa d assd as d ad asd'),
+      CardObject('4 January 2020', '2 asdasdasd asd as d sad a dsa d assd as d ad asd'),
+      CardObject('6 January 2020', '3 asdasdasd asd as d sad a dsa d assd as d ad asd'),
+      CardObject('8 January 2020', '4 asdasdasd asd as d sad a dsa d assd as d ad asd')
+    ];
+
+    for(CardObject card in cards){
       childs.add(Padding(
         padding: EdgeInsets.all(20.0),
         child: Container(
           height: 150,
-          child: CardImageText()
+          child: CardImageText(date: card.getDate, text: card.getText)
           )
       ));
     }
+
     return childs;
   }
 

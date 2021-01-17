@@ -4,10 +4,34 @@ class CardObject {
   String date;
   String text;
 
-  CardObject(date);
+  CardObject(this.date, this.text);
+
+  String get getText {
+    return this.text;
+  }  
+
+  String get getDate {
+    return this.date;
+  }
 }
 
-class CardImageText extends StatelessWidget {
+class CardImageText extends StatefulWidget {
+  final String date;
+  final String text;
+
+  CardImageText({Key key, this.date, this.text}) : super(key: key);
+
+  @override
+  _CardImageTextState createState() => _CardImageTextState();
+}
+
+class _CardImageTextState extends State<CardImageText> {
+
+  @override
+  void initState(){
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,12 +55,12 @@ class CardImageText extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [ 
-                    Text('2 January 2020'),
+                    Text(widget.date),
                     Container(
                       width: (MediaQuery.of(context).size.width - 200),
                       child: Padding(
                         padding: EdgeInsets.only(top: 10.0),
-                        child: Text('Tsadasdas dasdas das das das d sad asd as dsa das d asdsa das d sad sada sdfs dfs df sdfsdf  sdfs dfs')
+                        child: Text(widget.text)
                       )
                     )
                   ]
