@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './Background.dart';
 
 class ImageText extends StatefulWidget {
   final String text;
@@ -19,7 +20,7 @@ class _ImageTextState extends State<ImageText> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: Background(
               width: (MediaQuery.of(context).size.width),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

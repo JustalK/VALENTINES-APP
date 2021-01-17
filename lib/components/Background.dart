@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class Background extends StatefulWidget {
   final Widget child;
+  final double width;
 
-  Background({Key key, this.child}) : super(key: key);
+  Background({Key key, this.child, this.width}) : super(key: key);
 
   @override
   _BackgroundState createState() => _BackgroundState();
@@ -16,15 +17,16 @@ class _BackgroundState extends State<Background> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
             colors: [
               Colors.pink,
-              Colors.yellow,
-              Colors.red
+              Colors.red,
+              Colors.pink
             ]
           ),
         ),
+        width: widget.width,
         child: widget.child
       )
     );
