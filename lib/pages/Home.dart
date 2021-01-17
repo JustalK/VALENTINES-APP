@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../routes.dart';
-import 'second.dart';
+import 'Menu.dart';
 import '../components/Background.dart';
 
 class Home extends StatelessWidget {
@@ -32,9 +32,9 @@ class Home extends StatelessWidget {
             ),
             Center(
               child: ElevatedButton(
-                child: Text('Open route Second'),
+                child: Text('Open asdasda'),
                 onPressed: () {
-                  Navigator.of(context).push(Routes().generateRoute(Second(), 800));
+                  Navigator.of(context).push(Routes().generateRoute(Menu(), 800));
                 },
               ),
             )
