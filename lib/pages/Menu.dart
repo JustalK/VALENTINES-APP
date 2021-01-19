@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../routes.dart';
 import 'BigMemory.dart';
+import 'History.dart';
 import '../components/Background.dart';
 
 class Menu extends StatelessWidget {
@@ -24,10 +25,15 @@ class Menu extends StatelessWidget {
                   return Column(
                     children: <Widget> [
                       Center(
-                        child: CircleAvatar(
-                          radius: 72.0,
-                          backgroundColor: Colors.transparent,
-                          backgroundImage: AssetImage('assets/images/me.jpeg'),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(Routes().generateRoute(History(), 800));
+                          },
+                          child: CircleAvatar(
+                            radius: 72.0,
+                            backgroundColor: Colors.transparent,
+                            backgroundImage: AssetImage('assets/images/me.jpeg'),
+                          )
                         )
                       ),
                       Padding(
