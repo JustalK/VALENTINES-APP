@@ -26,15 +26,19 @@ class Home extends StatelessWidget {
             ),
             Center(
               child: Text('TITLE',
-                style: GoogleFonts.tangerine(
-                  textStyle: Theme.of(context).textTheme.headline1,
+                style: GoogleFonts.calligraffitti(
+                  textStyle: TextStyle(color: Colors.white),
                   fontSize: 40
                 )
               ),
             ),
             Container(
               child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed risus erat. Curabitur convallis euismod turpis, sed mollis lorem gravida blandit. Fusce sed tempus nisl. Praesent ac urna quam. Vivamus nec tempus tortor.',
-              textAlign: TextAlign.center),
+              style: GoogleFonts.raleway(
+                textStyle: TextStyle(color: Colors.white),
+                fontSize: 20
+              ),
+              textAlign: TextAlign.justify),
               padding: EdgeInsets.fromLTRB(40.0, 20.0, 40.0, 40.0),
             ),
             Center(
