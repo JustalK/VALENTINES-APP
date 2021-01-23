@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../routes.dart';
 import 'Menu.dart';
 import '../components/Background.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -24,7 +25,12 @@ class Home extends StatelessWidget {
               )
             ),
             Center(
-              child: Text('TITLE'),
+              child: Text('TITLE',
+                style: GoogleFonts.tangerine(
+                  textStyle: Theme.of(context).textTheme.headline1,
+                  fontSize: 40
+                )
+              ),
             ),
             Container(
               child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed risus erat. Curabitur convallis euismod turpis, sed mollis lorem gravida blandit. Fusce sed tempus nisl. Praesent ac urna quam. Vivamus nec tempus tortor.',
