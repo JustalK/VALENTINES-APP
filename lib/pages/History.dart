@@ -37,6 +37,7 @@ class History extends StatelessWidget {
         height: (MediaQuery.of(context).size.height),
         width: (MediaQuery.of(context).size.width),
         child: Background(
+          padding: 50.0,
           width: (MediaQuery.of(context).size.width),
           child: ListView(
             scrollDirection: Axis.vertical,

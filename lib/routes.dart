@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'pages/BigMemory.dart';
 
 class Routes {
   Route<dynamic> generateRoute(page, duration) {

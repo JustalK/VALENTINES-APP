@@ -27,21 +27,26 @@ class MenuObject {
 class Menu extends StatelessWidget {
   List<MenuObject> menus = [
     MenuObject('assets/images/me.jpeg', 'TITLE', History()),
-    MenuObject('assets/images/me.jpeg', 'TITLE', BigMemory()),
-    MenuObject('assets/images/me.jpeg', 'TITLE', History()),
-    MenuObject('assets/images/me.jpeg', 'TITLE', History()),
-    MenuObject('assets/images/me.jpeg', 'TITLE', History()),
-    MenuObject('assets/images/me.jpeg', 'TITLE', History()),
+    MenuObject('assets/images/me.jpeg', 'TITLE', BigMemory())
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Background(
+        padding: 50.0,
         child: ListView(
           children: <Widget>[
             Center(
-              child: Text('Title'),
+              child: Text(
+                'Title',
+                style: Theme.of(context).textTheme.headline2),
+            ),
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Center(
+                child: Text('asdasdasd sd sd s ds ds ds ds ds ds d sd s ds ds'),
+              )
             ),
             GridView.count(
                 crossAxisCount: 2,
@@ -67,9 +72,16 @@ class Menu extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: 20.0),
-                        child: Text(
-                          menus[i].title,
-                          style: Theme.of(context).textTheme.headline5,
+                        child: Column(
+                          children: <Widget> [
+                            Center(
+                              child: Text(
+                                menus[i].title,
+                                style: Theme.of(context).textTheme.headline5,
+                              )
+                            ),
+                            Text(' sdasdsa dasd a das dasd')
+                          ]
                         )
                       )
                     ]

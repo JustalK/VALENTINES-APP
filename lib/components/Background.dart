@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class Background extends StatefulWidget {
   final Widget child;
   final double width;
+  final double padding;
 
-  Background({Key key, this.child, this.width}) : super(key: key);
+  Background({Key key, this.child, this.width, this.padding}) : super(key: key);
 
   @override
   _BackgroundState createState() => _BackgroundState();
@@ -27,7 +28,10 @@ class _BackgroundState extends State<Background> {
           ),
         ),
         width: widget.width,
-        child: widget.child
+        child: Padding(
+          padding: EdgeInsets.only(top: widget.padding),
+          child: widget.child
+        )
       )
     );
   }

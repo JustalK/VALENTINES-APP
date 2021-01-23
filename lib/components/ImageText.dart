@@ -21,6 +21,7 @@ class _ImageTextState extends State<ImageText> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Background(
+              padding: 0.0,
               width: (MediaQuery.of(context).size.width),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
