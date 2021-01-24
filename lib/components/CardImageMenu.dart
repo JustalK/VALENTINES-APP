@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class CardObject {
   String date;
   String text;
+  String pathImage;
 
-  CardObject(this.date, this.text);
+  CardObject(this.date, this.text, this.pathImage);
 
   String get getText {
     return this.text;
@@ -13,6 +14,7 @@ class CardObject {
   String get getDate {
     return this.date;
   }
+  
 }
 
 class CardImageText extends StatefulWidget {

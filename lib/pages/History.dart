@@ -7,14 +7,14 @@ class History extends StatelessWidget {
     List<Widget> childs = [];
 
     List<CardObject> cards = [
-      CardObject('2 January 2020', '1 asdasdasd asd as d sad a dsa d assd as d ad asd'),
-      CardObject('4 January 2020', '2 asdasdasd asd as d sad a dsa d assd as d ad asd'),
-      CardObject('6 January 2020', '3 asdasdasd asd as d sad a dsa d assd as d ad asd'),
-      CardObject('8 January 2020', '4 asdasdasd asd as d sad a dsa d assd as d ad asd'),
-      CardObject('2 January 2020', '1 asdasdasd asd as d sad a dsa d assd as d ad asd'),
-      CardObject('4 January 2020', '2 asdasdasd asd as d sad a dsa d assd as d ad asd'),
-      CardObject('6 January 2020', '3 asdasdasd asd as d sad a dsa d assd as d ad asd'),
-      CardObject('8 January 2020', '4 asdasdasd asd as d sad a dsa d assd as d ad asd')
+      CardObject('2 January 2020', '1 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
+      CardObject('4 January 2020', '2 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
+      CardObject('6 January 2020', '3 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
+      CardObject('8 January 2020', '4 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
+      CardObject('2 January 2020', '1 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
+      CardObject('4 January 2020', '2 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
+      CardObject('6 January 2020', '3 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
+      CardObject('8 January 2020', '4 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg')
     ];
 
     for(CardObject card in cards){
@@ -22,7 +22,7 @@ class History extends StatelessWidget {
         padding: EdgeInsets.all(20.0),
         child: Container(
           height: 150,
-          child: CardImageText(date: card.getDate, text: card.getText)
+          child: CardImageText(date: card.getDate, text: card.getText, pathImage: card.getPathImage)
           )
       ));
     }

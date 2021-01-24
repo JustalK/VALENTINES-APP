@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class CardObject {
   String date;
   String text;
+  String pathImage;
 
-  CardObject(this.date, this.text);
+  CardObject(this.date, this.text, this.pathImage);
 
   String get getText {
     return this.text;
@@ -13,13 +14,18 @@ class CardObject {
   String get getDate {
     return this.date;
   }
+
+  String get getPathImage {
+    return this.pathImage;
+  }
 }
 
 class CardImageText extends StatefulWidget {
   final String date;
   final String text;
+  final String pathImage;
 
-  CardImageText({Key key, this.date, this.text}) : super(key: key);
+  CardImageText({Key key, this.date, this.text, this.pathImage}) : super(key: key);
 
   @override
   _CardImageTextState createState() => _CardImageTextState();
@@ -47,7 +53,7 @@ class _CardImageTextState extends State<CardImageText> {
                   child: CircleAvatar(
                     radius: 50.0,
                     backgroundColor: Colors.transparent,
-                    backgroundImage: AssetImage('assets/images/me.jpeg'),
+                    backgroundImage: AssetImage(widget.pathImage),
                   ),
                 ),
                 SizedBox(width: 20),

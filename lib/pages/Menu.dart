@@ -28,8 +28,8 @@ class MenuObject {
 
 class Menu extends StatelessWidget {
   List<MenuObject> menus = [
-    MenuObject('assets/images/me.jpeg', 'TITLE', History()),
-    MenuObject('assets/images/me.jpeg', 'TITLE', BigMemory())
+    MenuObject('assets/images/history.jpeg', 'Our History', History()),
+    MenuObject('assets/images/moments.jpeg', 'Best Moments', BigMemory())
   ];
 
   @override
@@ -41,7 +41,7 @@ class Menu extends StatelessWidget {
           children: <Widget>[
             Center(
               child: Text(
-                  'Title',
+                  'Our Life',
                   style: GoogleFonts.calligraffitti(
                     textStyle: TextStyle(color: Colors.white),
                     fontSize: 40
@@ -51,11 +51,12 @@ class Menu extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Center(
-                child: Text('asdasdasd sd sd s ds ds ds ds ds ds d sd s ds ds',
+                child: Text('      Do you like all those moments together ? Personally, I love them. They are precious. From this moment when I put my eyes on you, the little tiny girl accross the street, to the moment I saw you coming back from the delivery room. I cherish everything but some memories are stronger than other. Click on the picture under for seeing my favorite moments :',
                   style: GoogleFonts.raleway(
                     textStyle: TextStyle(color: Colors.white),
-                    fontSize: 20
+                    fontSize: 18
                   ),
+                  textAlign: TextAlign.justify
                 ),
               )
             ),

@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
               ),
             ),
             Container(
-              child: Text('Hey Diane, you thought I was just working on my personnal project, right ? But actually, I was working on my gift for valentine day. I could have write a letter as usual. However, I was thinking hard to come up with an unique idea. Something that nobody gave you before, something that represent me, something you could show to the world. For a developer, what could be better than an aplication ! And even better, I was doing it just under your eyes and you did not suspect anything...',
+              child: Text('      Hey Diane, you thought I was just working on my personnal project, right ? But actually, I was working on my gift for valentine day. I could have write a letter as usual. However, I was thinking hard to come up with an unique idea. Something that nobody gave you before, something that represent me, something you could show to the world. For a developer, what could be better than an aplication ! And even better, I was doing it just under your eyes and you did not suspect anything...',
               style: GoogleFonts.raleway(
                 textStyle: TextStyle(color: Colors.white),
                 fontSize: 18
