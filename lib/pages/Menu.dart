@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import '../routes.dart';
 import 'BigMemory.dart';
 import 'History.dart';
+import 'Home.dart';
 import '../components/Background.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MenuObject {
   String path;
@@ -39,22 +41,31 @@ class Menu extends StatelessWidget {
           children: <Widget>[
             Center(
               child: Text(
-                'Title',
-                style: Theme.of(context).textTheme.headline2),
+                  'Title',
+                  style: GoogleFonts.calligraffitti(
+                    textStyle: TextStyle(color: Colors.white),
+                    fontSize: 40
+                  )
+                )
             ),
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Center(
-                child: Text('asdasdasd sd sd s ds ds ds ds ds ds d sd s ds ds'),
+                child: Text('asdasdasd sd sd s ds ds ds ds ds ds d sd s ds ds',
+                  style: GoogleFonts.raleway(
+                    textStyle: TextStyle(color: Colors.white),
+                    fontSize: 20
+                  ),
+                ),
               )
             ),
             GridView.count(
                 crossAxisCount: 2,
                 physics: ScrollPhysics(), // to disable GridView's scrolling
                 shrinkWrap: true,
-                crossAxisSpacing: 8,
+                crossAxisSpacing: 10,
                 mainAxisSpacing: 50,
-                padding: EdgeInsets.symmetric(vertical: 40.0),
+                padding: EdgeInsets.symmetric(vertical: 20.0),
                 children: List.generate(menus.length, (i) {
                   return Column(
                     children: <Widget> [
@@ -77,16 +88,46 @@ class Menu extends StatelessWidget {
                             Center(
                               child: Text(
                                 menus[i].title,
-                                style: Theme.of(context).textTheme.headline5,
+                                style: GoogleFonts.raleway(
+                                  textStyle: TextStyle(color: Colors.white),
+                                  fontSize: 20
+                                ),
                               )
-                            ),
-                            Text(' sdasdsa dasd a das dasd')
+                            )
                           ]
                         )
                       )
                     ]
                   );
                 })
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 40.0),
+                child: Center(
+                  child: Text('asdasdasd sd sd s ds ds ds ds ds ds d sd s ds ds',
+                    style: GoogleFonts.raleway(
+                      textStyle: TextStyle(color: Colors.white),
+                      fontSize: 20
+                    ),
+                  ),
+                )
+              ),
+              Center(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    onPrimary: Colors.pink,
+                  ),
+                  child: Text('BACK TO MENU',
+                    style: GoogleFonts.raleway(
+                      textStyle: TextStyle(color: Colors.pink),
+                      fontSize: 14
+                    )
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
               )
           ]
         )
