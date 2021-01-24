@@ -28,8 +28,8 @@ class MenuObject {
 
 class Menu extends StatelessWidget {
   List<MenuObject> menus = [
-    MenuObject('assets/images/history.jpeg', 'Our History', History()),
-    MenuObject('assets/images/moments.jpeg', 'Best Moments', BigMemory())
+    MenuObject('assets/images/history.jpeg', 'OUR HISTORY', History()),
+    MenuObject('assets/images/moments.jpeg', 'BEST MOMENTS', BigMemory())
   ];
 
   @override
@@ -51,7 +51,7 @@ class Menu extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Center(
-                child: Text('      Do you like all those moments together ? Personally, I love them. They are precious. From this moment when I put my eyes on you, the little tiny girl accross the street, to the moment I saw you coming back from the delivery room. I cherish everything but some memories are stronger than other. Click on the picture under for seeing my favorite moments :',
+                child: Text('      Do you like all those moments together ? Personally, I love them. They are precious. From this moment when I put my eyes on you, the little tiny girl accross the street, to the moment I saw you coming back from the delivery room. I cherish everything but some memories are way more stronger than other...',
                   style: GoogleFonts.raleway(
                     textStyle: TextStyle(color: Colors.white),
                     fontSize: 18
@@ -83,19 +83,23 @@ class Menu extends StatelessWidget {
                         )
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 20.0),
-                        child: Column(
-                          children: <Widget> [
-                            Center(
-                              child: Text(
-                                menus[i].title,
-                                style: GoogleFonts.raleway(
-                                  textStyle: TextStyle(color: Colors.white),
-                                  fontSize: 20
-                                ),
+                        padding: EdgeInsets.only(top: 10.0),
+                        child: Center(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white,
+                              onPrimary: Colors.pink,
+                            ),
+                            child: Text(menus[i].title,
+                              style: GoogleFonts.raleway(
+                                textStyle: TextStyle(color: Colors.pink),
+                                fontSize: 14
                               )
-                            )
-                          ]
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).push(Routes().generateRoute(menus[i].widget, 800));
+                            },
+                          ),
                         )
                       )
                     ]
@@ -103,9 +107,9 @@ class Menu extends StatelessWidget {
                 })
               ),
               Padding(
-                padding: EdgeInsets.only(bottom: 40.0),
+                padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 20.0),
                 child: Center(
-                  child: Text('asdasdasd sd sd s ds ds ds ds ds ds d sd s ds ds',
+                  child: Text('      Thoses moments made my day, made me laught and made me choose you for a lifetime. I am so proud of you, I wanna go everywhere and say proudly : "Yes, she is my wife. She is taken. You can just look !". I came here in the Philippines alone but I did not expected ever in my craziest dream to create a family there.',
                     style: GoogleFonts.raleway(
                       textStyle: TextStyle(color: Colors.white),
                       fontSize: 20
