@@ -8,7 +8,7 @@ class History extends StatelessWidget {
 
     List<CardObject> cards = [
       CardObject('2 January 2020', '1 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
-      CardObject('4 January 2020', '2 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
+      CardObject('14 September 2018', 'Certainly the first picture you ever saw of me and a very bad picture against the light. I am certified bad cameraman.', 'assets/images/history_001.jpeg'),
       CardObject('6 January 2020', '3 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
       CardObject('8 January 2020', '4 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
       CardObject('2 January 2020', '1 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),

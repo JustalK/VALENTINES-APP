@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CardObject {
   String date;
@@ -42,7 +43,7 @@ class _CardImageTextState extends State<CardImageText> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          color: Colors.red,
+          color: Colors.white,
           child: Padding(
             padding: EdgeInsets.all(20.0),
             child: Row(
@@ -61,12 +62,23 @@ class _CardImageTextState extends State<CardImageText> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [ 
-                    Text(widget.date),
+                    Text(widget.date,
+                      style: GoogleFonts.raleway(
+                        textStyle: TextStyle(color: Colors.pink),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w900
+                      ),
+                    ),
                     Container(
                       width: (MediaQuery.of(context).size.width - 200),
                       child: Padding(
                         padding: EdgeInsets.only(top: 10.0),
-                        child: Text(widget.text)
+                        child: Text(widget.text,
+                          style: GoogleFonts.raleway(
+                            textStyle: TextStyle(color: Colors.pink),
+                            fontSize: 16
+                          ),
+                        )
                       )
                     )
                   ]
