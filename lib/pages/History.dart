@@ -7,10 +7,10 @@ class History extends StatelessWidget {
     List<Widget> childs = [];
 
     List<CardObject> cards = [
-      CardObject('2 January 2020', '1 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_001.jpeg'),
-      CardObject('14 September 2018', 'Certainly the first picture you ever saw of me and a very bad picture against the light. I am certified bad cameraman.', 'assets/images/history_001.jpeg'),
-      CardObject('6 January 2020', '3 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_002.jpeg'),
-      CardObject('8 January 2020', '4 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_003.jpeg'),
+      CardObject('Once upon a time', 'Certainly the first picture you ever saw of me and a very bad picture against the light. I am certified bad cameraman.', 'assets/images/history_001.jpeg'),
+      CardObject('14 September 2018', 'It will be the first time, I will be able to pass time with you. I will never forget that day. I did not want to move. It was raining, I was tired, it was the middle of the week. I just wanted to relax that night. But in the end, I chose to go and see who Diane is. And it will be the start of our lifetime story', 'assets/images/14_SEPT_2018.jpeg'),
+      CardObject('01 October 2018', 'When I am not with you, I will chat with you, send you picture of my daily. You will soon become the center of my life.', 'assets/images/01_OCTOBER_2018.jpeg'),
+      CardObject('8 January 2020', 'I will enjoy every weekend with you. I will love waking up by your side. I will miss you in the week. And this increadible feeling will grow up over the following week.', 'assets/images/10_OCTOBER_2018.jpeg'),
       CardObject('2 January 2020', '1 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_004.jpeg'),
       CardObject('4 January 2020', '2 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_005.jpeg'),
       CardObject('6 January 2020', '3 asdasdasd asd as d sad a dsa d assd as d ad asd', 'assets/images/history_006.jpeg'),
