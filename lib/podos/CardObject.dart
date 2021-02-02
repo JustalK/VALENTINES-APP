@@ -3,7 +3,7 @@ class CardObject {
   String text;
   String pathImage;
 
-  CardObject(this.date, this.text, this.pathImage);
+  CardObject({this.date, this.text, this.pathImage});
 
   String get getText {
     return this.text;
@@ -15,5 +15,12 @@ class CardObject {
 
   String get getPathImage {
     return this.pathImage;
+  }
+
+  factory CardObject.fromJson(Map<String, dynamic> parsedJson) {
+    return CardObject(
+        date: parsedJson['date'],
+        text: parsedJson['text'],
+        pathImage: parsedJson['pathImage']);
   }
 }

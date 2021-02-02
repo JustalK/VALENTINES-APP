@@ -1,46 +1,40 @@
 import 'package:flutter/material.dart';
+import 'dart:convert';
 import 'package:valentines_day/components/Background.dart';
 import 'package:valentines_day/components/CardImageText.dart';
 import 'package:valentines_day/podos/CardObject.dart';
 import 'package:valentines_day/utils/loader.dart';
 
 class History extends StatelessWidget {
-  List<Widget>getAllCards() {
-    List<Widget> childs = [];
 
-    print(parseHistoryJson());
-    List<CardObject> cards = [
-      CardObject('23 September 2018', 'AAA AAA AAA', 'assets/images/2018_09_23.jpg'),
-    ];
-
-    for(CardObject card in cards){
-      childs.add(Padding(
-        padding: EdgeInsets.all(20.0),
-        child: Container(
-          height: 150,
-          child: CardImageText(date: card.getDate, text: card.getText, pathImage: card.getPathImage)
-          )
-      ));
-    }
-
-    return childs;
+  Future<List<CardObject>> loadHistory() async {
+    String jsonString = await parseHistoryJson();
+    final jsonResponse = json.decode(jsonString);
+    final cards = jsonResponse.map((item) => CardObject.fromJson(item)).toList().cast<CardObject>();
+    return cards;
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        height: (MediaQuery.of(context).size.height),
-        width: (MediaQuery.of(context).size.width),
-        child: Background(
-          padding: 50.0,
-          width: (MediaQuery.of(context).size.width),
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: getAllCards()
-          )
-        ),
-      ),
+    return FutureBuilder<List<CardObject>>(
+      future: loadHistory(),
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return Container(
+              child: ListView.builder(                                                  
+                  itemCount: snapshot.data.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (BuildContext context, int index) {
+                      return Text('${snapshot.data[index].date}');                                           
+                  }
+              )
+          );
+        } else {
+          // We can show the loading view until the data comes back.
+          debugPrint('Step 1, build loading widget');
+          return CircularProgressIndicator();
+        }
+      },
     );
   }
 }
