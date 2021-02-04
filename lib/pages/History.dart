@@ -16,25 +16,37 @@ class History extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<List<CardObject>>(
-      future: loadHistory(),
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return Container(
-              child: ListView.builder(                                                  
-                  itemCount: snapshot.data.length,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (BuildContext context, int index) {
-                      return Text('${snapshot.data[index].date}');                                           
-                  }
-              )
-          );
-        } else {
-          // We can show the loading view until the data comes back.
-          debugPrint('Step 1, build loading widget');
-          return CircularProgressIndicator();
-        }
-      },
+    return Scaffold(
+      body: Background(
+        padding: 50.0,
+        width: (MediaQuery.of(context).size.width),
+        child: FutureBuilder<List<CardObject>>(
+          future: loadHistory(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return Container(
+                    child: ListView.builder(                                                  
+                      itemCount: snapshot.data.length,
+                      scrollDirection: Axis.vertical,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Padding(
+                          padding: EdgeInsets.all(20.0),
+                          child: Container(
+                            height: 150,
+                            child: CardImageText(date: '${snapshot.data[index].date}', text: '${snapshot.data[index].text}', pathImage: '${snapshot.data[index].pathImage}')
+                          )
+                        );                                          
+                      }
+                    )
+                );
+              } else {
+                // We can show the loading view until the data comes back.
+                debugPrint('Step 1, build loading widget');
+                return CircularProgressIndicator();
+              }
+            },
+          )
+        )
     );
   }
 }

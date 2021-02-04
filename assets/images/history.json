@@ -1,17 +1,17 @@
 [
     {
         "date": "23 September 2018", 
-        "legend": "AAA AAA AAA",
-        "path": "assets/images/2018/2018_09_23.jpeg"
+        "text": "AAA AAA AAA",
+        "pathImage": "assets/images/2018_09_23.jpg"
     },
     {
         "date": "23 September 2018", 
-        "legend": "AAA AAA AAA",
-        "path": "assets/images/2018/2018_09_23.jpeg"
+        "text": "AAA AAA AAA",
+        "pathImage": "assets/images/2018_09_23.jpg"
     },
     {
         "date": "23 September 2018", 
-        "legend": "AAA AAA AAA",
-        "path": "assets/images/2018/2018_09_23.jpeg"
+        "text": "AAA AAA AAA",
+        "pathImage": "assets/images/2018_09_23.jpg"
     }
 ]
