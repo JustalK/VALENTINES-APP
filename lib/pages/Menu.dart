@@ -35,19 +35,20 @@ class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('Our Life',
+          style: GoogleFonts.calligraffitti(
+            textStyle: TextStyle(color: Colors.white),
+            fontSize: 30
+          )
+        ),
+        backgroundColor: Colors.pink,
+      ),
       body: Background(
-        padding: 50.0,
+        padding: 0.0,
         child: ListView(
           children: <Widget>[
-            Center(
-              child: Text(
-                  'Our Life',
-                  style: GoogleFonts.calligraffitti(
-                    textStyle: TextStyle(color: Colors.white),
-                    fontSize: 40
-                  )
-                )
-            ),
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Center(
@@ -116,23 +117,6 @@ class Menu extends StatelessWidget {
                     ),
                   ),
                 )
-              ),
-              Center(
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    onPrimary: Colors.pink,
-                  ),
-                  child: Text('BACK TO MENU',
-                    style: GoogleFonts.raleway(
-                      textStyle: TextStyle(color: Colors.pink),
-                      fontSize: 14
-                    )
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                ),
               )
           ]
         )

@@ -4,6 +4,7 @@ import 'package:valentines_day/components/Background.dart';
 import 'package:valentines_day/components/CardImageText.dart';
 import 'package:valentines_day/podos/CardObject.dart';
 import 'package:valentines_day/utils/loader.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class History extends StatelessWidget {
 
@@ -17,8 +18,17 @@ class History extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('History',
+        style: GoogleFonts.calligraffitti(
+          textStyle: TextStyle(color: Colors.white),
+          fontSize: 30
+        )),
+        backgroundColor: Colors.pink,
+      ),
       body: Background(
-        padding: 50.0,
+        padding: 0.0,
         width: (MediaQuery.of(context).size.width),
         child: FutureBuilder<List<CardObject>>(
           future: loadHistory(),
