@@ -28,7 +28,7 @@ class History extends StatelessWidget {
         backgroundColor: Colors.pink,
       ),
       body: Background(
-        padding: 0.0,
+        padding: 20.0,
         width: (MediaQuery.of(context).size.width),
         child: FutureBuilder<List<CardObject>>(
           future: loadHistory(),

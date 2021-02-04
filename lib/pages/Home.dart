@@ -54,7 +54,7 @@ class Home extends StatelessWidget {
                   )
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(Routes().generateRoute(Menu(), 800));
+                  Navigator.of(context).push(Routes().generateRoute(Menu(), 800, 0.0, 1.0));
                 },
               ),
             )

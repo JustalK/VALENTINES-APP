@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Routes {
-  Route<dynamic> generateRoute(page, duration) {
+  Route<dynamic> generateRoute(page, duration, top, left) {
     return PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) => page,
       transitionDuration: Duration(milliseconds: duration),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
-        var begin = Offset(0.0, 1.0);
+        var begin = Offset(top, left);
         var end = Offset.zero;
         var curve = Curves.ease;
 

@@ -46,7 +46,7 @@ class Menu extends StatelessWidget {
         backgroundColor: Colors.pink,
       ),
       body: Background(
-        padding: 0.0,
+        padding: 20.0,
         child: ListView(
           children: <Widget>[
             Padding(
@@ -74,7 +74,7 @@ class Menu extends StatelessWidget {
                       Center(
                         child: InkWell(
                           onTap: () {
-                            Navigator.of(context).push(Routes().generateRoute(menus[i].widget, 800));
+                            Navigator.of(context).push(Routes().generateRoute(menus[i].widget, 800, i%2 == 0 ? -1.0 : 1.0, 0.0));
                           },
                           child: CircleAvatar(
                             radius: 72.0,
@@ -98,7 +98,7 @@ class Menu extends StatelessWidget {
                               )
                             ),
                             onPressed: () {
-                              Navigator.of(context).push(Routes().generateRoute(menus[i].widget, 800));
+                              Navigator.of(context).push(Routes().generateRoute(menus[i].widget, 800, i%2 == 0 ? -1.0 : 1.0, 0.0));
                             },
                           ),
                         )
