@@ -113,7 +113,7 @@ class Menu extends StatelessWidget {
                   child: Text('      Thoses moments made my day, made me laught and made me choose you for a lifetime. I am so proud of you, I wanna go everywhere and say proudly : "Yes, she is my wife. She is taken. You can just look !". I came here in the Philippines alone but I did not expected ever in my craziest dream to create a family there.',
                     style: GoogleFonts.raleway(
                       textStyle: TextStyle(color: Colors.white),
-                      fontSize: 20
+                      fontSize: 18
                     ),
                   ),
                 )
