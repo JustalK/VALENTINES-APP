@@ -44,6 +44,8 @@ class History extends StatelessWidget {
                           padding: EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 0.0),
                           child: Container(
                             height: 150,
+                            color: Colors.pinkAccent,
+                            padding: EdgeInsets.all(1.0),
                             child: CardImageText(date: '${snapshot.data[index].date}', text: '${snapshot.data[index].text}', pathImage: '${snapshot.data[index].pathImage}')
                           )
                         );                                          

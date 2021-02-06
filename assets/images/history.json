@@ -1,4 +1,9 @@
-[
+[    
+    {
+        "date": "August 2018",
+        "text": "The first picture, against the light, you saw of me. You choose to chat with me and that would be the start of an incredible love story.",
+        "pathImage": "assets/2018/2018_08_01.jpg"
+    },
     {
         "date": "14 September 2018",
         "text": "Do you remember the moment we meet ? I will certainly never forget.",
@@ -71,7 +76,7 @@
     },
     {
         "date": "29 December 2018",
-        "text": "This christmas was wonderful. Actually, the best one ever for me. You decide to pass this end of the year with me instead of your family. You made me fall for you so hard !",
+        "text": "Those days with you was wonderful. You decide to pass this end of the year with me instead of your family. You made me fall for you so hard !",
         "pathImage": "assets/2018/2018_12_29.jpg"
     },
     {
@@ -270,6 +275,11 @@
         "pathImage": "assets/2020/2020_01_28.jpg"
     },
     {
+        "date": "31 January 2020",
+        "text": "The day ! The time stop, I put my knee down and told you the words. I hope this moment is etched into your memory forever.",
+        "pathImage": "assets/2020/2020_01_31.jpg"
+    },
+    {
         "date": "16 February 2020",
         "text": "Late valentine date. I like when we have matching clothes Baby. Can we buy our clothes together and match them ?",
         "pathImage": "assets/2020/2020_02_16.jpg"
@@ -398,5 +408,25 @@
         "date": "30 December 2020",
         "text": "I want more moment like this one. I wanna take you both every places. I want to discover things with you and we will talk about it to our grand-childrens.",
         "pathImage": "assets/2020/2020_12_30_2.jpg"
+    },
+    {
+        "date": "08 January 2021",
+        "text": "There is no day without me thinking about you or her. My world turns only around you both now and for the rest of my life.",
+        "pathImage": "assets/2021/2021_01_08.jpg"
+    },
+    {
+        "date": "17 January 2021",
+        "text": "We got so much fun around that table with her, right ? She always manage to make us laught by showing us new things.",
+        "pathImage": "assets/2021/2021_01_17.jpg"
+    },
+    {
+        "date": "18 January 2021",
+        "text": "I love you both. Your are my every day treasures !",
+        "pathImage": "assets/2021/2021_01_18.jpg"
+    },
+    {
+        "date": "31 January 2021",
+        "text": "We are unfortunately not married yet but we will be this year. For the moment, let's celebrate our 1 year engagement. It was a nice day. I love you my Diane.",
+        "pathImage": "assets/2021/2021_01_31.jpg"
     }
 ]

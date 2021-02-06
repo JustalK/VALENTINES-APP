@@ -23,7 +23,7 @@ class _CardImageTextState extends State<CardImageText> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          color: Colors.white,
+          color: Colors.pink,
           child: Padding(
             padding: EdgeInsets.all(20.0),
             child: Row(
@@ -44,18 +44,18 @@ class _CardImageTextState extends State<CardImageText> {
                   children: [ 
                     Text(widget.date,
                       style: GoogleFonts.raleway(
-                        textStyle: TextStyle(color: Colors.pink),
+                        textStyle: TextStyle(color: Colors.white),
                         fontSize: 16,
                         fontWeight: FontWeight.w900
                       ),
                     ),
                     Container(
-                      width: (MediaQuery.of(context).size.width - 200),
+                      width: (MediaQuery.of(context).size.width - 205),
                       child: Padding(
                         padding: EdgeInsets.only(top: 10.0),
                         child: Text(widget.text,
                           style: GoogleFonts.raleway(
-                            textStyle: TextStyle(color: Colors.pink),
+                            textStyle: TextStyle(color: Colors.white),
                             fontSize: 16
                           ),
                         )

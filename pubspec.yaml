@@ -54,6 +54,7 @@ flutter:
     - assets/2019/
     - assets/2020/
     - assets/2021/
+    - assets/moments/
     - assets/images/history.json
 
   # An image asset can refer to one or more resolution-specific "variants", see

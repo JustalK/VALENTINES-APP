@@ -3,8 +3,9 @@ import './Background.dart';
 
 class ImageText extends StatefulWidget {
   final String text;
+  final String pathImage;
 
-  ImageText({Key key, this.text}) : super(key: key);
+  ImageText({Key key, this.text, this.pathImage}) : super(key: key);
 
   @override
   _ImageTextState createState() => _ImageTextState();
@@ -30,7 +31,7 @@ class _ImageTextState extends State<ImageText> {
                   Center(
                     child: Padding(
                       padding: EdgeInsets.all(40.0),
-                      child: new Image.asset('assets/images/me.jpeg')
+                      child: new Image.asset(widget.pathImage)
                     )
                   ),
                   Center(
