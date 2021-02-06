@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import '../components/ImageText.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BigMemory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Best Moments',
+        style: GoogleFonts.calligraffitti(
+          textStyle: TextStyle(color: Colors.white),
+          fontSize: 30
+        )),
+        backgroundColor: Colors.pink,
+      ),
       body: Container(
           child: ListView(
             scrollDirection: Axis.horizontal,
