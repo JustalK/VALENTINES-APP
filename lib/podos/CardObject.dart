@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 class CardObject {
   String date;
   String text;
@@ -18,8 +20,9 @@ class CardObject {
   }
 
   factory CardObject.fromJson(Map<String, dynamic> parsedJson) {
+    debugPrint('${parsedJson}');
     return CardObject(
-        date: parsedJson['date'],
+        date: parsedJson.containsKey('date') ? parsedJson['date'] : '',
         text: parsedJson['text'],
         pathImage: parsedJson['pathImage']);
   }

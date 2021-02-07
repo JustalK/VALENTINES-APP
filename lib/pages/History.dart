@@ -53,8 +53,6 @@ class History extends StatelessWidget {
                     )
                 );
               } else {
-                // We can show the loading view until the data comes back.
-                debugPrint('Step 1, build loading widget');
                 return CircularProgressIndicator();
               }
             },

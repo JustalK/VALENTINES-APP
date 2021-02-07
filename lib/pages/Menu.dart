@@ -88,12 +88,12 @@ class Menu extends StatelessWidget {
                         child: Center(
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.white,
+                              primary: Colors.pink,
                               onPrimary: Colors.pink,
                             ),
                             child: Text(menus[i].title,
                               style: GoogleFonts.raleway(
-                                textStyle: TextStyle(color: Colors.pink),
+                                textStyle: TextStyle(color: Colors.white),
                                 fontSize: 14
                               )
                             ),
@@ -115,6 +115,29 @@ class Menu extends StatelessWidget {
                       textStyle: TextStyle(color: Colors.white),
                       fontSize: 18
                     ),
+                  ),
+                )
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 20.0),
+                child: Center(
+                  child: Text('      Our Life together is just starting but I already saw you are the perfect one for me. You change the kids I was into a husband family dad. You change my way of thinking. You change my way of seeing thing. You change me for a better version of myself. You bring the good part of me, make it shine and expose it to the outside world. I feel extremelly lucky to have find you. It could not have been a better moment. We were both broken and we fixed each other. It took time but we did it and now we are going together for even more adventure. You are a great wife, a great mother and a great support. I could not live without you. Baby, Thank you for everything you do ! From the deepest of my heart, Thank You ! I love you so much, you have no idea.',
+                    style: GoogleFonts.raleway(
+                      textStyle: TextStyle(color: Colors.white),
+                      fontSize: 18
+                    ),
+                  ),
+                )
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 80.0),
+                child: Center(
+                  child: Text('Happy Valentine\nI Love You\nMy Diane\n\nFrom\nKevin Justal\nYour Love',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.calligraffitti(
+                      textStyle: TextStyle(color: Colors.white),
+                      fontSize: 30
+                    )
                   ),
                 )
               )

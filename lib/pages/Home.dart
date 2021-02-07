@@ -44,12 +44,12 @@ class Home extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
+                  primary: Colors.pink,
                   onPrimary: Colors.pink,
                 ),
                 child: Text('CONTINUE',
                   style: GoogleFonts.raleway(
-                    textStyle: TextStyle(color: Colors.pink),
+                    textStyle: TextStyle(color: Colors.white),
                     fontSize: 14
                   )
                 ),
