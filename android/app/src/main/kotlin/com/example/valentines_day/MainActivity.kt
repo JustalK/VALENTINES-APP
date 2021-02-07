@@ -1,4 +1,4 @@
-package com.example.valentines_day
+package com.justalk.valentines_day
 
 import io.flutter.embedding.android.FlutterActivity
 
