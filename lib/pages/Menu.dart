@@ -52,7 +52,7 @@ class Menu extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Center(
-                child: Text('      Do you like all those moments together ? Personally, I love them. They are precious. From this moment when I put my eyes on you, the little tiny girl accross the street, to the moment I saw you coming back from the delivery room. I cherish everything but some memories are way more stronger than other...',
+                child: Text('      Do you like all those moments together? Personally, I love them. They are precious. From this moment when I put my eyes on you, the tiny little girl accross the street, to the moment I saw you coming back from the delivery room. I cherish everything but some memories are way more stronger than the others...',
                   style: GoogleFonts.raleway(
                     textStyle: TextStyle(color: Colors.white),
                     fontSize: 18
@@ -110,7 +110,7 @@ class Menu extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 20.0),
                 child: Center(
-                  child: Text('      Thoses moments made my day, made me laught and made me choose you for a lifetime. I am so proud of you, I wanna go everywhere and say proudly : "Yes, she is my wife. She is taken. You can just look !". I came here in the Philippines alone but I did not expected ever in my craziest dream to create a family there.',
+                  child: Text('      Those moments made my day, made me laugh and made me choose you for a lifetime. I am so proud of you, I wanna go everywhere and say proudly: "Yes, she is my wife. She is taken. You can only look!". I came here in the Philippines alone but I did not expect ever in my craziest dream to create a family here.',
                     style: GoogleFonts.raleway(
                       textStyle: TextStyle(color: Colors.white),
                       fontSize: 18
@@ -121,7 +121,7 @@ class Menu extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 20.0),
                 child: Center(
-                  child: Text('      Our Life together is just starting but I already saw you are the perfect one for me. You change the kids I was into a husband family dad. You change my way of thinking. You change my way of seeing thing. You change me for a better version of myself. You bring the good part of me, make it shine and expose it to the outside world. I feel extremelly lucky to have find you. It could not have been a better moment. We were both broken and we fixed each other. It took time but we did it and now we are going together for even more adventure. You are a great wife, a great mother and a great support. I could not live without you. Baby, Thank you for everything you do ! From the deepest of my heart, Thank You ! I love you so much, you have no idea.',
+                  child: Text('      Our Life together is just starting but I already saw you are the perfect one for me. You changed the kid I was into a husband, a family man, a dad. You changed my way of thinking. You changed my way of seeing things. You changed me for a better version of myself. You bring out the good part of me, make it shine and expose it to the outside world. I feel extremely lucky to have found you. There couldn\'t be a better moment. We were both broken and we fixed each other. It took time but we did it and now we are going together for even more adventures. You are a great wife, a great mother and a great support. I could not live without you. Baby, thank you for everything you do! From the deepest of my heart, thank you! I love you so much, you have no idea.',
                     style: GoogleFonts.raleway(
                       textStyle: TextStyle(color: Colors.white),
                       fontSize: 18
