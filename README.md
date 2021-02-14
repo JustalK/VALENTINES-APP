@@ -2,6 +2,10 @@
 
 What is the best way to say you love someone for a developer ? Creating an app ! Yes, I created an entire app for the valentine day because I know for sure nobody never gave that to my wife. It's unique and represent the developer that I am so well. For also making some personal improvement, I decided to use a new technology that I did not nothing about `Flutter`. I learnt everything I could about `Dart` and `Flutter` in a month.
 
+For publishing to app store and google play, I use the `Codemagic` CI/CD hook. I connected my repository to it.
+
+![Codemagic](https://api.codemagic.io/apps/6027ec49ede2fecaeca2f136/6027ec49ede2fecaeca2f135/status_badge.svg)
+
 ![Alt text](documentation/app/1.png?raw=true "My Sweet Diane 1")
 ![Alt text](documentation/app/2.png?raw=true "My Sweet Diane 2")
 ![Alt text](documentation/app/3.png?raw=true "My Sweet Diane 3")
@@ -70,6 +74,18 @@ For building the app for google-store or an APK :
 ```
 flutter build apk
 flutter build appbundle
+```
+
+For building the icon of the app, I use `flutter_launcher_icons` and generate everything with the command below :
+
+```
+flutter pub pub run flutter_launcher_icons:main
+```
+
+For removing the build, in case you want to clean the project :
+
+```
+flutter clean
 ```
 
 ## License
