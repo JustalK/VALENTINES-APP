@@ -1,66 +1,78 @@
+import 'dart:convert';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import '../routes.dart';
 import 'Menu.dart';
 import '../components/Background.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Home extends StatelessWidget {
+class Album {
+  final int userId;
+  final int id;
+  final String title;
+
+  Album({@required this.userId, @required this.id, @required this.title});
+
+  factory Album.fromJson(Map<String, dynamic> json) {
+    return Album(
+      userId: json['userId'],
+      id: json['id'],
+      title: json['title'],
+    );
+  }
+}
+
+Future<Album> fetchAlbum() async {
+  final response =
+      await http.get(Uri.https('jsonplaceholder.typicode.com', 'albums/1'));
+
+  if (response.statusCode == 200) {
+    // If the server did return a 200 OK response,
+    // then parse the JSON.
+    return Album.fromJson(jsonDecode(response.body));
+  } else {
+    // If the server did not return a 200 OK response,
+    // then throw an exception.
+    throw Exception('Failed to load album');
+  }
+}
+
+class Home extends StatefulWidget {
+  Home({Key key}) : super(key: key);
+
+  @override
+  _Home createState() => _Home();
+}
+
+class _Home extends State<Home> {
+  Future<Album> futureAlbum ;
+
+  @override
+  void initState() {
+    super.initState();
+    futureAlbum = fetchAlbum();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Background(
-        padding: 0.0,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Center(
-              child: Padding(
-                padding: EdgeInsets.only(bottom: 20.0),
-                child: CircleAvatar(
-                  radius: 90.0,
-                  backgroundColor: Colors.transparent,
-                  backgroundImage: AssetImage('assets/images/me.jpeg'),
-                )
-              )
-            ),
-            Center(
-              child: Text('My Sweet Diane',
-                style: GoogleFonts.calligraffitti(
-                  textStyle: TextStyle(color: Colors.white),
-                  fontSize: 40
-                )
-              ),
-            ),
-            Container(
-              child: Text('      Hey baby Diane, you thought during evenings I was just working on my personal project, right? But actually, I was working on my gift for Valentines Day. I could have written a letter as usual. However, after a long time thinking about it, I came up with a unique idea. Something I am sure nobody have given you before, something representing me to the fullest, something you could show to the world. For a developer, what could be better than an application showing my love for you? And even better, I was doing it just under your nose and you did not suspect anything...',
-              style: GoogleFonts.raleway(
-                textStyle: TextStyle(color: Colors.white),
-                fontSize: 18
-              ),
-              textAlign: TextAlign.justify),
-              padding: EdgeInsets.fromLTRB(40.0, 20.0, 40.0, 20.0),
-            ),
-            Center(
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.pink,
-                  onPrimary: Colors.pink,
-                ),
-                child: Text('CONTINUE',
-                  style: GoogleFonts.raleway(
-                    textStyle: TextStyle(color: Colors.white),
-                    fontSize: 14
-                  )
-                ),
-                onPressed: () {
-                  Navigator.of(context).push(Routes().generateRoute(Menu(), 800, 0.0, 1.0));
-                },
-              ),
-            )
-          ],
-        )
-      )
+        body: Center(
+          child: FutureBuilder<Album>(
+            future: futureAlbum,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return Text(snapshot.data.title);
+              } else if (snapshot.hasError) {
+                return Text("${snapshot.error}");
+              }
+
+              // By default, show a loading spinner.
+              return CircularProgressIndicator();
+            },
+          ),
+        ),
     );
   }
 }
